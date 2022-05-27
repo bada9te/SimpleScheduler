@@ -5,9 +5,7 @@
 using namespace std;
 
 
-MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent, Qt::Window | Qt::FramelessWindowHint)
-    , ui(new Ui::MainWindow)
+MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent, Qt::Window | Qt::FramelessWindowHint), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
     this->setWindowTitle("Simple Scheduler");
