@@ -3,9 +3,7 @@
 
 
 
-Dialog::Dialog(QWidget *parent) :
-    QDialog(parent),
-    ui(new Ui::Dialog)
+Dialog::Dialog(QWidget *parent) : QDialog(parent), ui(new Ui::Dialog)
 {
     ui->setupUi(this);
     setWindowFlags(Qt::FramelessWindowHint);  // hide butons
