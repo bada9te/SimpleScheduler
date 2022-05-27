@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Settings</class>
+ <widget class="QDialog" name="Settings">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>421</width>
+    <height>674</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/img/settings.png</normaloff>:/img/settings.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QPushButton" name="closeForm">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>600</y>
+     <width>45</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#closeForm {
+    background-color: white;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color:rgb(44, 47, 51);
+    font: bold 25px;
+    padding: 1px;
+}
+QPushButton#closeForm:pressed {
+    background-color: rgb(88, 101, 242,);
+    border-style: inset;
+}</string>
+   </property>
+   <property name="text">
+    <string>✅</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="high_peeker">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>-10</y>
+     <width>421</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <italic>false</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white;
+font: bold 20px;
+border-width: 2px;
+border-radius: 15px;
+background-color: rgb(46, 48, 66)</string>
+   </property>
+   <property name="text">
+    <string>Settings</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+   </property>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>50</y>
+     <width>381</width>
+     <height>159</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>15</number>
+    </property>
+    <property name="leftMargin">
+     <number>5</number>
+    </property>
+    <property name="rightMargin">
+     <number>5</number>
+    </property>
+    <property name="bottomMargin">
+     <number>5</number>
+    </property>
+    <item>
+     <widget class="QCheckBox" name="runWithWindos">
+      <property name="styleSheet">
+       <string notr="true">color: white;
+ font: bold 20px;
+border-width: 2px;
+border-radius: 10px;</string>
+      </property>
+      <property name="text">
+       <string>Run with Windows.</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="notifSound">
+      <property name="styleSheet">
+       <string notr="true">color: white;
+ font: bold 20px;
+border-width: 2px;
+border-radius: 10px;</string>
+      </property>
+      <property name="text">
+       <string>Notifications sound.</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="keepInTray">
+      <property name="styleSheet">
+       <string notr="true">color: white;
+ font: bold 20px;
+border-width: 2px;
+border-radius: 10px;</string>
+      </property>
+      <property name="text">
+       <string>Keep running in tray.</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="Disable_Shadows_Button">
+      <property name="styleSheet">
+       <string notr="true">color: white;
+ font: bold 20px;
+border-width: 2px;
+border-radius: 10px;</string>
+      </property>
+      <property name="text">
+       <string>Disable shadows.</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QListWidget" name="bg">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>421</width>
+     <height>661</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(88, 101, 242);
+border-style: outset;
+border-width: 3px;
+border-radius: 20px;
+border-color: rgb(46, 48, 66);
+font: bold 14px;
+padding: 1px;
+
+</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>220</y>
+     <width>421</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_2">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>470</y>
+     <width>421</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(46, 48, 66);</string>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ReserBackgroundButton">
+   <property name="geometry">
+    <rect>
+     <x>209</x>
+     <y>540</y>
+     <width>191</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#ReserBackgroundButton {
+    background-color: white;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color:rgb(44, 47, 51);
+    font: bold 20px;
+    padding: 1px;
+}
+QPushButton#ReserBackgroundButton:pressed {
+    background-color: rgb(88, 101, 242,);
+    border-style: inset;
+}</string>
+   </property>
+   <property name="text">
+    <string>Reset</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ColorPeekButton">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>540</y>
+     <width>181</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#ColorPeekButton {
+    background-color: white;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color:rgb(44, 47, 51);
+    font: bold 20px;
+    padding: 1px;
+}
+QPushButton#ColorPeekButton:pressed {
+    background-color: rgb(88, 101, 242,);
+    border-style: inset;
+}</string>
+   </property>
+   <property name="text">
+    <string>Change color</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="background_label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>500</y>
+     <width>371</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white;
+font: bold 20px;
+border-width: 2px;
+border-radius: 10px;</string>
+   </property>
+   <property name="text">
+    <string>Background:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="custom_sound">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>250</y>
+     <width>381</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white;
+ font: bold 20px;
+border-width: 2px;
+border-radius: 10px;</string>
+   </property>
+   <property name="text">
+    <string>Custom notifications sound.</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="file_inp">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>290</y>
+     <width>381</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: white;
+border-style: outset;
+border-width: 2px;
+border-radius: 10px;
+border-color:rgb(44, 47, 51);
+font: bold 14px;
+padding: 1px;
+</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="openFile">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>330</y>
+     <width>381</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#openFile {
+   background-color: white;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color:rgb(44, 47, 51);
+    font: bold 20px;
+    padding: 1px;
+}
+QPushButton#openFile:pressed {
+    background-color: rgb(88, 101, 242,);
+    border-style: inset;
+}</string>
+   </property>
+   <property name="text">
+    <string>Open sound file...</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="volume_label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>370</y>
+     <width>381</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white;
+font: bold 20px;
+border-width: 2px;
+border-radius: 10px;</string>
+   </property>
+   <property name="text">
+    <string>Volume: (50%)</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QSlider" name="horizontalSlider">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>430</y>
+     <width>381</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-width: 2px;
+border-radius: 10px;</string>
+   </property>
+   <property name="maximum">
+    <number>100</number>
+   </property>
+   <property name="value">
+    <number>50</number>
+   </property>
+   <property name="sliderPosition">
+    <number>50</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <zorder>bg</zorder>
+  <zorder>closeForm</zorder>
+  <zorder>high_peeker</zorder>
+  <zorder>verticalLayoutWidget</zorder>
+  <zorder>line</zorder>
+  <zorder>line_2</zorder>
+  <zorder>ReserBackgroundButton</zorder>
+  <zorder>ColorPeekButton</zorder>
+  <zorder>background_label</zorder>
+  <zorder>custom_sound</zorder>
+  <zorder>file_inp</zorder>
+  <zorder>openFile</zorder>
+  <zorder>volume_label</zorder>
+  <zorder>horizontalSlider</zorder>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>img/info.ico</file>
+        <file>img/myAppIcon.ico</file>
+        <file>img/settings.ico</file>
+        <file>img/info.png</file>
+        <file>img/myAppIcon.png</file>
+        <file>img/settings.png</file>
+        <file>audio/new_message.mp3</file>
+        <file>img/add.ico</file>
+        <file>img/add.png</file>
+    </qresource>
+</RCC>

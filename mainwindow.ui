@@ -1,0 +1,859 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1576</width>
+    <height>608</height>
+   </rect>
+  </property>
+  <property name="mouseTracking">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Simple Scheduler</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/img/myAppIcon.ico</normaloff>:/img/myAppIcon.ico</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="gridLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>921</width>
+      <height>49</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <property name="leftMargin">
+      <number>5</number>
+     </property>
+     <property name="rightMargin">
+      <number>5</number>
+     </property>
+     <property name="spacing">
+      <number>6</number>
+     </property>
+     <item row="0" column="1">
+      <widget class="QLabel" name="label_2">
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+         <italic>false</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: white;
+font: bold 35px;
+border-width: 2px;
+border-radius: 15px;</string>
+       </property>
+       <property name="text">
+        <string>In Progress</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+         <italic>false</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: white;
+font: bold 35px;
+border-width: 2px;
+border-radius: 15px;</string>
+       </property>
+       <property name="text">
+        <string>To do</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="time_label">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>490</y>
+      <width>280</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+font: bold 10px;
+border-width: 2px;
+border-radius: 10px;</string>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="stop_playing_button">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>168</x>
+      <y>530</y>
+      <width>611</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#stop_playing_button {
+    background-color: red;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color:rgb(44, 47, 51);
+    font: bold 20px;
+    padding: 1px;
+    color: white;
+    
+}
+QPushButton#stop_playing_button:pressed {
+    background-color: white;
+    border-style: inset;
+    border-color: red;
+    color: black;
+}</string>
+    </property>
+    <property name="text">
+     <string>Mute (Replace to &quot;In Progress&quot;)</string>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>5</width>
+      <height>5</height>
+     </size>
+    </property>
+    <property name="autoExclusive">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="bg">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>7</y>
+      <width>940</width>
+      <height>531</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(88, 101, 242);
+border-style: outset;
+border-width: 3px;
+border-radius: 20px;
+border-color: rgb(46, 48, 66);
+font: bold 14px;
+padding: 1px;
+
+</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="high_peeker">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>-20</y>
+      <width>940</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+font: bold 20px;
+border-width: 2px;
+border-radius: 20px;
+background-color: rgb(46, 48, 66)</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="table_todo">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>130</y>
+      <width>441</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: white;
+border-style: outset;
+border-width: 2px;
+border-radius: 10px;
+border-color:rgb(44, 47, 51);
+font: bold 16px;
+padding: 1px;
+</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="table_done">
+    <property name="geometry">
+     <rect>
+      <x>479</x>
+      <y>130</y>
+      <width>441</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: white;
+border-style: outset;
+border-width: 2px;
+border-radius: 10px;
+border-color:rgb(44, 47, 51);
+font: bold 16px;
+padding: 1px;
+</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="addtaskButton">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>470</y>
+      <width>45</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add a new task&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="whatsThis">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#addtaskButton {
+    background-color: white;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color:rgb(44, 47, 51);
+    font: bold 30px;
+    padding: 1px;
+}
+QPushButton#addtaskButton:pressed {
+    border-color: blue;
+    background-color: white;
+    border-style: inset;
+}</string>
+    </property>
+    <property name="text">
+     <string>➕</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="markAsDone">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>470</y>
+      <width>45</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Start task / add task to &amp;quot;In Progress&amp;quot;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#markAsDone {
+    background-color: white;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color:rgb(44, 47, 51);
+    font: bold 25px;
+    padding: 1px;
+}
+QPushButton#markAsDone:pressed {
+    background-color: white;
+    border-style: inset;
+    fore-color: white;
+    border-color: green;
+}</string>
+    </property>
+    <property name="text">
+     <string>🏹</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="returnButton">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>470</y>
+      <width>45</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Return selected task to &amp;quot;To do&amp;quot; list&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#returnButton {
+    background-color: white;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color:rgb(44, 47, 51);
+    font: bold 25px;
+    padding: 1px;
+}
+QPushButton#returnButton:pressed {
+	border-color: orange;
+    background-color: white;
+    border-style: inset;
+}</string>
+    </property>
+    <property name="text">
+     <string>⬅️</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="clearDoneListButton">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>470</y>
+      <width>45</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Mark selected as done&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#clearDoneListButton {
+    background-color: white;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color:rgb(44, 47, 51);
+    font: bold 25px;
+    padding: 1px;
+}
+QPushButton#clearDoneListButton:pressed {
+    border-color: red;
+    background-color: white;
+    border-style: inset;
+}</string>
+    </property>
+    <property name="text">
+     <string>✅</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="helpButton">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>7</y>
+      <width>45</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Website&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#helpButton {
+    background-color: rgb(44, 47, 51);
+    border-style: outset;
+    border-width: 0px;
+    border-radius: 10px;
+    border-color:rgb(44, 47, 51);
+    font: bold 30px;
+    padding: 1px;
+}
+QPushButton#helpButton:pressed {
+    background-color: rgb(88, 101, 242,);
+    border-style: inset;
+}</string>
+    </property>
+    <property name="text">
+     <string>💡</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="infoButton">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>7</y>
+      <width>45</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Info&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#infoButton {
+    background-color: rgb(44, 47, 51);
+    border-style: outset;
+    border-width: 0px;
+    border-radius: 10px;
+    border-color:rgb(44, 47, 51);
+    font: bold 30px;
+    padding: 1px;
+}
+QPushButton#infoButton:pressed {
+    background-color: rgb(88, 101, 242,);
+    border-style: inset;
+}</string>
+    </property>
+    <property name="text">
+     <string>ℹ️</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="SettingsButton">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>7</y>
+      <width>45</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#SettingsButton {
+    background-color:rgb(44, 47, 51);
+    border-style: outset;
+    border-width: 0px;
+    border-radius: 10px;
+    border-color:rgb(44, 47, 51);
+    font: bold 30px;
+    padding: 1px;
+}
+QPushButton#SettingsButton:pressed {
+    background-color: rgb(88, 101, 242,);
+    border-style: inset;
+}</string>
+    </property>
+    <property name="text">
+     <string>⚙️</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="openFileButton">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>7</y>
+      <width>45</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Open lists&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#openFileButton {
+    background-color: rgb(44, 47, 51);
+    border-style: outset;
+    border-width: 0px;
+    border-radius: 10px;
+    border-color:rgb(44, 47, 51);
+   font: bold 30px;
+    padding: 1px;
+}
+QPushButton#openFileButton:pressed {
+    background-color: rgb(88, 101, 242,);
+    border-style: inset;
+}</string>
+    </property>
+    <property name="text">
+     <string>📂</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="saveFileButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>7</y>
+      <width>45</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Save lists&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#saveFileButton {
+    background-color: rgb(44, 47, 51);
+    border-style: outset;
+    border-width: 0px;
+    border-radius: 10px;
+    border-color:rgb(44, 47, 51);
+    font: bold 30px;
+    padding: 1px;
+}
+QPushButton#saveFileButton:pressed {
+    background-color: rgb(88, 101, 242,);
+    border-style: inset;
+}</string>
+    </property>
+    <property name="text">
+     <string>💾</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>10</y>
+      <width>381</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+font: bold 35px;
+border-width: 2px;
+border-radius: 15px;</string>
+    </property>
+    <property name="text">
+     <string>Simple scheduler</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="removeToDo">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>470</y>
+      <width>45</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Remove selected task&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#removeToDo {
+    background-color: white;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color:rgb(44, 47, 51);
+    font: bold 30px;
+    padding: 1px;
+}
+QPushButton#removeToDo:pressed {
+    background-color: white;
+    border-style: inset;
+    fore-color: white;
+    border-color: green;
+}</string>
+    </property>
+    <property name="text">
+     <string>➖</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="clearInProgress">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>470</y>
+      <width>45</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear &amp;quot;In Progress&amp;quot; list&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#clearInProgress {
+    background-color: white;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color:rgb(44, 47, 51);
+    font: bold 30px;
+    padding: 1px;
+}
+QPushButton#clearInProgress:pressed {
+    background-color: white;
+    border-style: inset;
+    fore-color: white;
+    border-color: green;
+}</string>
+    </property>
+    <property name="text">
+     <string>🧹</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="closeFormButton">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>7</y>
+      <width>45</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Exit&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#closeFormButton {
+    background-color: rgb(44, 47, 51);
+    border-style: outset;
+    border-width: 0px;
+    border-radius: 10px;
+    border-color:rgb(44, 47, 51);
+    font: bold 30px;
+    padding: 1px;
+}
+QPushButton#closeFormButton:pressed {
+    background-color: red;
+    border-style: inset;
+	border-color: white
+}</string>
+    </property>
+    <property name="text">
+     <string>❌</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="minimizeFormButton">
+    <property name="geometry">
+     <rect>
+      <x>830</x>
+      <y>7</y>
+      <width>45</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimize&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#minimizeFormButton {
+    background-color: rgb(44, 47, 51);
+    border-style: outset;
+    border-width: 0px;
+    border-radius: 10px;
+    border-color:rgb(44, 47, 51);
+    font: bold 30px;
+    padding: 1px;
+}
+QPushButton#minimizeFormButton:pressed {
+    background-color: rgb(88, 101, 242,);
+    border-style: inset;
+}</string>
+    </property>
+    <property name="text">
+     <string>➖</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="table_outdated">
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>0</y>
+      <width>441</width>
+      <height>330</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: white;
+border-style: outset;
+border-width: 2px;
+border-radius: 10px;
+border-color:rgb(44, 47, 51);
+font: bold 16px;
+padding: 1px;
+</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="see_outdated">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>470</y>
+      <width>45</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Outdated tasks&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#see_outdated {
+    background-color: gray;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color:rgb(44, 47, 51);
+    font: bold 25px;
+    padding: 1px;
+}
+QPushButton#see_outdated:pressed {
+    background-color: white;
+    border-style: inset;
+    fore-color: white;
+    border-color: green;
+}</string>
+    </property>
+    <property name="text">
+     <string>🕞</string>
+    </property>
+   </widget>
+   <zorder>stop_playing_button</zorder>
+   <zorder>bg</zorder>
+   <zorder>high_peeker</zorder>
+   <zorder>gridLayoutWidget_2</zorder>
+   <zorder>time_label</zorder>
+   <zorder>table_todo</zorder>
+   <zorder>table_done</zorder>
+   <zorder>addtaskButton</zorder>
+   <zorder>markAsDone</zorder>
+   <zorder>returnButton</zorder>
+   <zorder>clearDoneListButton</zorder>
+   <zorder>helpButton</zorder>
+   <zorder>infoButton</zorder>
+   <zorder>SettingsButton</zorder>
+   <zorder>openFileButton</zorder>
+   <zorder>saveFileButton</zorder>
+   <zorder>label_7</zorder>
+   <zorder>removeToDo</zorder>
+   <zorder>clearInProgress</zorder>
+   <zorder>closeFormButton</zorder>
+   <zorder>minimizeFormButton</zorder>
+   <zorder>table_outdated</zorder>
+   <zorder>see_outdated</zorder>
+  </widget>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
