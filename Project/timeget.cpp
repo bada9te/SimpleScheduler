@@ -1,4 +1,4 @@
-#include "timethread.h"
+#include "timeget.h"
 #include <iostream>
 
 TimeThread::TimeThread()

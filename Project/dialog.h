@@ -44,8 +44,6 @@ private:
         position = m_event->globalPos();
     }
 
-
-
 signals:
     void signalOk(QString, QString);
     void signalCa();

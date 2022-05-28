@@ -60,14 +60,10 @@ signals:
     void shadows_on_main();
     void change_bg_main(QString &str);
 
-
 private slots:
     void on_closeForm_clicked();
-    void on_custom_sound_stateChanged(int arg1);
-    void on_runWithWindos_stateChanged(int arg1);
-    void on_notifSound_stateChanged(int arg1);
-    void on_keepInTray_stateChanged(int arg1);
     void on_openFile_clicked();
+    void on_custom_sound_stateChanged(int arg1);
     void on_horizontalSlider_valueChanged(int value);
     void on_Disable_Shadows_Button_stateChanged(int arg1);
     void on_ColorPeekButton_clicked();

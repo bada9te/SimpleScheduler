@@ -2,14 +2,13 @@
 #include "ui_settings.h"
 #include "mainwindow.h"
 
+
 Settings::Settings(QWidget *parent) : QDialog(parent), ui(new Ui::Settings)
 {
     ui->setupUi(this);
     this->setWindowTitle("Settings");
     this->setAttribute(Qt::WA_TranslucentBackground);
     setWindowFlags(Qt::FramelessWindowHint);  // hide butons
-
-
 
     // shadows
     ui->closeForm->setGraphicsEffect(shadows.sh1);
@@ -146,27 +145,6 @@ void Settings::on_custom_sound_stateChanged(int arg1)
         ui->openFile->setEnabled(false);
     }
 }
-
-// run with windows
-void Settings::on_runWithWindos_stateChanged(int arg1)
-{
-
-}
-
-
-// play sound on notification
-void Settings::on_notifSound_stateChanged(int arg1)
-{
-
-}
-
-
-// keep in tray
-void Settings::on_keepInTray_stateChanged(int arg1)
-{
-
-}
-
 
 // open custom audio file
 void Settings::on_openFile_clicked()

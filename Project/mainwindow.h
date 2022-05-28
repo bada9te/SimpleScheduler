@@ -15,23 +15,18 @@
 #include <QGraphicsDropShadowEffect>
 #include <QDesktopServices>
 #include <QUrl>
-#include <thread>
-#include <chrono>
-
 
 #include <windows.h>
 #include <iostream>
 #include <vector>
-#include <chrono>
 #include <string>
 #include <fstream>
 #include <conio.h>
 
-
 #include "dialog.h"
 #include "settings.h"
 #include "info.h"
-#include "timethread.h"
+#include "timeget.h"
 #include "shadows.h"
 #include "json.hpp"
 
@@ -44,7 +39,6 @@ namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
 
-
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -52,7 +46,6 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-
 
 protected:
     QPoint position;
@@ -67,7 +60,6 @@ protected:
         move(x()+delta.x(), y() + delta.y());
         position = m_event->globalPos();
     }
-
 
 private:
     Ui::MainWindow  *ui;
@@ -91,7 +83,6 @@ private:
     void read_settings(const QString& location);
     void read_file(const QString& location);
     void tick_outdated();
-
 
 private slots:
     void on_addtaskButton_clicked();

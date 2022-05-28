@@ -1,5 +1,5 @@
-#ifndef TIMETHREAD_H
-#define TIMETHREAD_H
+#ifndef TIMEGET_H
+#define TIMEGET_H
 #include <QtCore>
 #include <qdatetime.h>
 #include <string>
@@ -16,10 +16,9 @@ public:
     QString time_str;
     std::string check_str;
 
-
 signals:
     void onTimeChanged(QString s);
     void save_all();
 };
 
-#endif // TIMETHREAD_H
+#endif // TIMEGET_H

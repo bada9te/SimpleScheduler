@@ -1,6 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file>icons/myAppIcon.png</file>
+        <file>icons/coffee-cup.png</file>
         <file>icons/info.png</file>
         <file>icons/settings.png</file>
         <file>icons/add.png</file>

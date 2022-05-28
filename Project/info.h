@@ -16,7 +16,6 @@ class info : public QDialog
 {
     Q_OBJECT
 
-
 public:
     explicit info(QWidget *parent = nullptr);
     ~info();
@@ -41,7 +40,6 @@ private:
         move(x()+delta.x(), y() + delta.y());
         position = m_event->globalPos();
     }
-
 
 signals:
     void onInfoClose();
